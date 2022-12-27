@@ -68,7 +68,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <counter>LINE</counter>
+                                            <counter>COMPLEXITY</counter>
                                             <value>COVEREDRATIO</value>
                                             <minimum>100%</minimum>
                                         </limit>
@@ -77,10 +77,17 @@
                             </rules>
                         </configuration>
                     </execution>
+
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
 
 </project>
-
